@@ -19,10 +19,7 @@ const Welcome = () => {
         </div>
       </div>
       <div className="absolute top-7 right-5  z-5">
-        <img
-          className="w-20 h-20 opacity-40"
-          src="public\static\images\burgir.png"
-        ></img>
+        <img className="w-20 h-20 opacity-40" src="burgir.png"></img>
       </div>
     </div>
   );
