@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import QRCode from "react-qr-code";
+
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
   const [paymentStatus, setPaymentStatus] = useState(false);
@@ -16,14 +17,13 @@ const Cart = ({ cart, setCart, handleChange }) => {
     cart.map((item) => (ans += item.amount * item.price));
     setPrice(ans);
   };
-
   useEffect(() => {
     handlePrice();
   });
   const payment = () => {
     var options = {
-      key: "rzp_test_2swYtFfbetDQ3t",
-      key_secret: "mfhjSAzEZrXXVRD5AUrjJZTQ",
+      key: import.meta.env.VITE_RAZOR_PAY_KEY,
+      key_secret: import.meta.env.VITE_RAZOR_PAY_KEY_SECRET,
       amount: price * 100,
       currency: "INR",
       name: "Food App",

@@ -21,7 +21,7 @@ const Welcome = () => {
       <div className="absolute top-7 right-5  z-5">
         <img
           className="w-20 h-20 opacity-40"
-          src="..\src\assets\burgir.png"
+          src="public\static\images\burgir.png"
         ></img>
       </div>
     </div>
